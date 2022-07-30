@@ -10,6 +10,7 @@
 		FCA7283F28955B5C00560FBD /* feed_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; };
 		FCA7284428955B5C00560FBD /* feed_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7284328955B5C00560FBD /* feed_appTests.swift */; };
 		FCA7284F28955BA800560FBD /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7284E28955BA800560FBD /* FeedItem.swift */; };
+		FCA7285128955C8100560FBD /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7285028955C8100560FBD /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +28,7 @@
 		FCA7283E28955B5C00560FBD /* feed-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "feed-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7284328955B5C00560FBD /* feed_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feed_appTests.swift; sourceTree = "<group>"; };
 		FCA7284E28955BA800560FBD /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		FCA7285028955C8100560FBD /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,7 @@
 		FCA7283828955B5C00560FBD /* feed-app */ = {
 			isa = PBXGroup;
 			children = (
-				FCA7284E28955BA800560FBD /* FeedItem.swift */,
+				FCA7285228955D7F00560FBD /* Feed Feature */,
 			);
 			path = "feed-app";
 			sourceTree = "<group>";
@@ -80,6 +82,15 @@
 				FCA7284328955B5C00560FBD /* feed_appTests.swift */,
 			);
 			path = "feed-appTests";
+			sourceTree = "<group>";
+		};
+		FCA7285228955D7F00560FBD /* Feed Feature */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7284E28955BA800560FBD /* FeedItem.swift */,
+				FCA7285028955C8100560FBD /* FeedLoader.swift */,
+			);
+			path = "Feed Feature";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA7285128955C8100560FBD /* FeedLoader.swift in Sources */,
 				FCA7284F28955BA800560FBD /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
