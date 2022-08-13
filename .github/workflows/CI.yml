@@ -14,5 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: XCode select
+      run: sudo xcode-select -switch /Applications/XCode.app
+    
     - name: Build and test
       run: xcodebuild clean build test -project feed-app.xcodeproj -scheme "CI" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
