@@ -61,6 +61,17 @@
                ReferencedContainer = "container:feed-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC42FAE328C47D0400B068C5"
+               BuildableName = "feed_appCacheIntegrationTests.xctest"
+               BlueprintName = "feed_appCacheIntegrationTests"
+               ReferencedContainer = "container:feed-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
