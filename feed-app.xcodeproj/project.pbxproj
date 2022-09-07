@@ -41,8 +41,8 @@
 		FCA7285128955C8100560FBD /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7285028955C8100560FBD /* FeedLoader.swift */; };
 		FCA7285428962FA000560FBD /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7285328962FA000560FBD /* RemoteFeedLoader.swift */; };
 		FCC306A928C86F3F009FEAE0 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC306A828C86F3F009FEAE0 /* FeedViewControllerTests.swift */; };
-		FCC306AB28C874CC009FEAE0 /* feed_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; platformFilter = ios; };
-		FCC306AC28C874CC009FEAE0 /* feed_app.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FCC306AB28C874CC009FEAE0 /* feed_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; };
+		FCC306AC28C874CC009FEAE0 /* feed_app.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCC306B028C875A4009FEAE0 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCFCF9928A7922C0095D3E7 /* XCTestCase+MemoryLeakTracking.swift */; };
 		FCC306B228C8839F009FEAE0 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC306B128C8839F009FEAE0 /* FeedViewController.swift */; };
 		FCCD702828A8392B00561F1B /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCFCF9928A7922C0095D3E7 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -727,7 +727,6 @@
 		};
 		FCC306AE28C874CC009FEAE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			platformFilter = ios;
 			target = FCA7283528955B5C00560FBD /* feed-app */;
 			targetProxy = FCC306AD28C874CC009FEAE0 /* PBXContainerItemProxy */;
 		};
