@@ -9,6 +9,7 @@ import UIKit
 import feed_app
 
 public protocol FeedImageDataLoaderTask {
+    func start()
     func cancel()
 }
 
@@ -85,6 +86,10 @@ final public class FeedViewController: UITableViewController {
     public override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         cancelTask(forRowAt: indexPath)
     }
+    
+    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        tasks[indexPath]?.start()
+    }
 }
 
 extension FeedViewController: UITableViewDataSourcePrefetching {
@@ -98,8 +103,10 @@ extension FeedViewController: UITableViewDataSourcePrefetching {
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach(cancelTask)
     }
-    
-    private func cancelTask(forRowAt indexPath: IndexPath) {
+}
+
+private extension FeedViewController {
+    func cancelTask(forRowAt indexPath: IndexPath) {
         tasks[indexPath]?.cancel()
         tasks[indexPath] = nil
     }
