@@ -8,25 +8,17 @@
 import Foundation
 import feed_app
 
-struct FeedViewModel {
-    let feed: [FeedImage]
+protocol FeedLoadingView {
+    func display(_ viewModel: FeedLoadingViewModel)
 }
 
 protocol FeedView {
     func display(_ viewModel: FeedViewModel)
 }
 
-struct FeedLoadingViewModel {
-    let isLoading: Bool
-}
-
-protocol FeedLoadingView {
-    func display(_ viewModel: FeedLoadingViewModel)
-}
-
 final class FeedPresenter {
-    var feedView: FeedView
-    var loadingView: FeedLoadingView
+    private let feedView: FeedView
+    private let loadingView: FeedLoadingView
     
     init(feedView: FeedView, loadingView: FeedLoadingView) {
         self.feedView = feedView
