@@ -39,6 +39,7 @@
 		FC6AE21528BE337B00E613E8 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6AE21428BE337B00E613E8 /* FeedCachePolicy.swift */; };
 		FC6AE21728BE369100E613E8 /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6AE21628BE369100E613E8 /* FeedCacheTestHelpers.swift */; };
 		FC84E50828B12A5E002EB80C /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84E50728B12A5E002EB80C /* CacheFeedUseCaseTests.swift */; };
+		FC93E4BF2924BA30009B0645 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93E4BE2924BA30009B0645 /* FeedPresenter.swift */; };
 		FC99CFEF28C5F166000D527B /* feed_app_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99CFE728C5F165000D527B /* feed_app_iOS.framework */; };
 		FCA7283F28955B5C00560FBD /* feed_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; };
 		FCA7284428955B5C00560FBD /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7284328955B5C00560FBD /* LoadFeedFromRemoteUseCaseTests.swift */; };
@@ -145,6 +146,7 @@
 		FC6AE21428BE337B00E613E8 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		FC6AE21628BE369100E613E8 /* FeedCacheTestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCacheTestHelpers.swift; sourceTree = "<group>"; };
 		FC84E50728B12A5E002EB80C /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
+		FC93E4BE2924BA30009B0645 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		FC99CFE728C5F165000D527B /* feed_app_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = feed_app_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC99CFEE28C5F166000D527B /* feed-app-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "feed-app-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7283628955B5C00560FBD /* feed_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = feed_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,7 +271,6 @@
 		FC6476CF2920BD1300BF980B /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				FCB24D8F2923794B00A08034 /* Models */,
 				FC6476D6292236B800BF980B /* Composers */,
 				FC6476D02920BD2300BF980B /* Controllers */,
 				FC6476D12920BD2C00BF980B /* Views */,
@@ -338,10 +339,21 @@
 			path = "Feed Cache";
 			sourceTree = "<group>";
 		};
+		FC93E4BD2924BA0D009B0645 /* Feed Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FCB24D9229237EC400A08034 /* FeedImageViewModel.swift */,
+				FCB24D902923795700A08034 /* FeedViewModel.swift */,
+				FC93E4BE2924BA30009B0645 /* FeedPresenter.swift */,
+			);
+			path = "Feed Presentation";
+			sourceTree = "<group>";
+		};
 		FC99CFE828C5F165000D527B /* feed-app-iOS */ = {
 			isa = PBXGroup;
 			children = (
 				FC6476CC2920BCDB00BF980B /* Feed Image Loader */,
+				FC93E4BD2924BA0D009B0645 /* Feed Presentation */,
 				FC6476CF2920BD1300BF980B /* Feed UI */,
 			);
 			path = "feed-app-iOS";
@@ -421,15 +433,6 @@
 				FCCFCF9B28A82E010095D3E7 /* URLSessionHTTPClient.swift */,
 			);
 			path = "Feed API";
-			sourceTree = "<group>";
-		};
-		FCB24D8F2923794B00A08034 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FCB24D9229237EC400A08034 /* FeedImageViewModel.swift */,
-				FCB24D902923795700A08034 /* FeedViewModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		FCC306AA28C874CC009FEAE0 /* Frameworks */ = {
@@ -712,6 +715,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC93E4BF2924BA30009B0645 /* FeedPresenter.swift in Sources */,
 				FC6476CE2920BCF600BF980B /* FeedImageDataLoader.swift in Sources */,
 				FC6476D32920C8B700BF980B /* FeedRefreshViewController.swift in Sources */,
 				FC6476AD2918FD1200BF980B /* UIView+Shimmering.swift in Sources */,
