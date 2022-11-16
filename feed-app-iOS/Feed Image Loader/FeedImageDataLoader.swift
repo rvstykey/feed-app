@@ -8,7 +8,6 @@
 import Foundation
 
 public protocol FeedImageDataLoaderTask {
-    func start()
     func cancel()
 }
 
