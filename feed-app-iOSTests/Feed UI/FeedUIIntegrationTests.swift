@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests.swift
+//  FeedUIIntegrationTests.swift
 //  feed-app-iOSTests
 //
 //  Created by Rostislav Zapolsky on 07.09.22.
@@ -10,7 +10,7 @@ import XCTest
 import feed_app
 import feed_app_iOS
 
-final class FeedViewControllerTests: XCTestCase {
+final class FeedUIIntegrationTests: XCTestCase {
     
     func test_feedView_hasTitle() {
         let (sut, _) = makeSUT()

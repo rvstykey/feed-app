@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests+Assertions.swift
+//  FeedUIIntegrationTests+Assertions.swift
 //  feed-app-iOSTests
 //
 //  Created by Rostislav Zapolsky on 16.11.22.
@@ -9,7 +9,7 @@ import XCTest
 import feed_app
 import feed_app_iOS
 
-extension FeedViewControllerTests {
+extension FeedUIIntegrationTests {
     
     func assertThat(_ sut: FeedViewController, isRendering feed: [FeedImage], file: StaticString = #file, line: UInt = #line) {
         guard sut.numberOfRenderedFeedImageViews() == feed.count else {
