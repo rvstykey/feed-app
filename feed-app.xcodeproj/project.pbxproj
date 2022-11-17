@@ -54,8 +54,8 @@
 		FC93E4E029251D16009B0645 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93E4DF29251D16009B0645 /* UIControl+TestHelpers.swift */; };
 		FC93E4E229251D2A009B0645 /* UIImage+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93E4E129251D29009B0645 /* UIImage+TestHelpers.swift */; };
 		FC93E4E429251D44009B0645 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93E4E329251D44009B0645 /* UIRefreshControl+TestHelpers.swift */; };
-		FC93E4E629261EE4009B0645 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC93E4E529261EE4009B0645 /* Feed.strings */; };
 		FC93E4E8292620CC009B0645 /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC93E4E7292620CC009B0645 /* FeedViewControllerTests+Localization.swift */; };
+		FC93E4E9292621C8009B0645 /* Feed.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC93E4EB292621C8009B0645 /* Feed.strings */; };
 		FC99CFEF28C5F166000D527B /* feed_app_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99CFE728C5F165000D527B /* feed_app_iOS.framework */; };
 		FCA7283F28955B5C00560FBD /* feed_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCA7283628955B5C00560FBD /* feed_app.framework */; };
 		FCA7284428955B5C00560FBD /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7284328955B5C00560FBD /* LoadFeedFromRemoteUseCaseTests.swift */; };
@@ -176,8 +176,10 @@
 		FC93E4DF29251D16009B0645 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		FC93E4E129251D29009B0645 /* UIImage+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+TestHelpers.swift"; sourceTree = "<group>"; };
 		FC93E4E329251D44009B0645 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
-		FC93E4E529261EE4009B0645 /* Feed.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Feed.strings; sourceTree = "<group>"; };
 		FC93E4E7292620CC009B0645 /* FeedViewControllerTests+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewControllerTests+Localization.swift"; sourceTree = "<group>"; };
+		FC93E4EA292621C8009B0645 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Feed.strings; sourceTree = "<group>"; };
+		FC93E4EC29262205009B0645 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Feed.strings"; sourceTree = "<group>"; };
+		FC93E4ED2926223B009B0645 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Feed.strings; sourceTree = "<group>"; };
 		FC99CFE728C5F165000D527B /* feed_app_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = feed_app_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC99CFEE28C5F166000D527B /* feed-app-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "feed-app-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA7283628955B5C00560FBD /* feed_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = feed_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -380,7 +382,7 @@
 				FC93E4CA2925101C009B0645 /* FeedLoadingViewModel.swift */,
 				FC93E4BE2924BA30009B0645 /* FeedPresenter.swift */,
 				FC93E4CC29251064009B0645 /* FeedViewModel.swift */,
-				FC93E4E529261EE4009B0645 /* Feed.strings */,
+				FC93E4EB292621C8009B0645 /* Feed.strings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -698,7 +700,9 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				"pt-BR",
 				Base,
+				el,
 			);
 			mainGroup = FCA7282C28955B5C00560FBD;
 			productRefGroup = FCA7283728955B5C00560FBD /* Products */;
@@ -729,7 +733,7 @@
 			files = (
 				FC93E4C5292501B3009B0645 /* Feed.storyboard in Resources */,
 				FC93E4C72925026B009B0645 /* Feed.xcassets in Resources */,
-				FC93E4E629261EE4009B0645 /* Feed.strings in Resources */,
+				FC93E4E9292621C8009B0645 /* Feed.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,6 +901,19 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		FC93E4EB292621C8009B0645 /* Feed.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC93E4EA292621C8009B0645 /* en */,
+				FC93E4EC29262205009B0645 /* pt-BR */,
+				FC93E4ED2926223B009B0645 /* el */,
+			);
+			name = Feed.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		FC42FAEC28C47D0400B068C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1056,6 +1073,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1119,6 +1137,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
