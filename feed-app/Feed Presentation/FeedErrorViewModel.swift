@@ -1,14 +1,14 @@
 //
 //  FeedErrorViewModel.swift
-//  feed-app-iOS
+//  feed-app
 //
 //  Created by Rostislav Zapolsky on 18.11.22.
 //
 
 import Foundation
 
-struct FeedErrorViewModel {
-    let message: String?
+public struct FeedErrorViewModel {
+    public let message: String?
     
     static var noError: FeedErrorViewModel {
         return FeedErrorViewModel(message: nil)
