@@ -9,19 +9,19 @@ import XCTest
 import feed_app
 
 class LoadFeedFromRemoteUseCaseTests: XCTestCase {
-
+    
     func test_init_doesNotRequestDataFromURL() {
         let (_, client) = makeSUT()
-                
+        
         XCTAssertTrue(client.requestedURLs.isEmpty)
     }
-
+    
     func test_load_requestsDataFromURL() {
         let url = URL(string: "http://a-given-url.com")!
         let (sut, client) = makeSUT(url: url)
         
         sut.load() { _ in }
-
+        
         XCTAssertEqual(client.requestedURLs, [url])
     }
     
@@ -46,7 +46,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_load_deliversErrorOnNon200HttpResponse() {
         let (sut, client) = makeSUT()
-                
+        
         let samples = [199, 201, 300, 400, 500]
         samples.enumerated().forEach { index, code in
             expect(sut, toCompleteWith: failure(.invalidData)) {
@@ -67,7 +67,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_load_deliversNoItemsOn200HttpResponseWithEmptyJSONList() {
         let (sut, client) = makeSUT()
-
+        
         expect(sut, toCompleteWith: .success([])) {
             let emptyListJSON = makeItemsJSON([])
             client.complete(withStatusCode: 200, data: emptyListJSON)
@@ -76,7 +76,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
     func test_load_deliverItemsOn200HttpResponseWithJSONItems() {
         let (sut, client) = makeSUT()
-
+        
         let item1 = makeItem(
             id: UUID(),
             imageURL: URL(string: "http://a-url.com")!)
@@ -131,7 +131,7 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
             "image": imageURL.absoluteString
         ].compactMapValues { $0 }
         
-         return (item, json)
+        return (item, json)
     }
     
     private func makeItemsJSON(_ items: [[String: Any]]) -> Data {
@@ -154,35 +154,9 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
             }
             exp.fulfill()
         }
-                
+        
         action()
         
         wait(for: [exp], timeout: 1.0)
-    }
-    
-    class HTTPClientSpy: HTTPClient {
-        private var messages = [(url: URL, completion: (HTTPClient.Result) -> Void)]()
-        
-        var requestedURLs: [URL] {
-            return messages.map { $0.url }
-        }
-        
-        func get(from url: URL, completion: @escaping (HTTPClient.Result) -> Void) {
-            messages.append((url, completion))
-        }
-        
-        func complete(with error: Error, at index: Int = 0) {
-            messages[index].completion(.failure(error))
-        }
-        
-        func complete(withStatusCode code: Int, data: Data, at index: Int = 0) {
-            let response = HTTPURLResponse(
-                url: requestedURLs[index],
-                statusCode: code,
-                httpVersion: nil,
-                headerFields: nil
-            )! 
-            messages[index].completion(.success((data, response)))
-        }
     }
 }
