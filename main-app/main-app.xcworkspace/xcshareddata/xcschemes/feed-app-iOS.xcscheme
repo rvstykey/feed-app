@@ -17,7 +17,7 @@
                BlueprintIdentifier = "FC99CFE628C5F165000D527B"
                BuildableName = "feed_app_iOS.framework"
                BlueprintName = "feed-app-iOS"
-               ReferencedContainer = "container:feed-app.xcodeproj">
+               ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,21 @@
             BlueprintIdentifier = "FC99CFE628C5F165000D527B"
             BuildableName = "feed_app_iOS.framework"
             BlueprintName = "feed-app-iOS"
-            ReferencedContainer = "container:feed-app.xcodeproj">
+            ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FCA7283528955B5C00560FBD"
+            BuildableName = "feed_app.framework"
+            BlueprintName = "feed-app"
+            ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
+         </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "FC4ABB08292B4D9200464813"
+            BuildableName = "main-app.app"
+            BlueprintName = "main-app"
+            ReferencedContainer = "container:main-app.xcodeproj">
          </BuildableReference>
       </CodeCoverageTargets>
       <Testables>
@@ -47,7 +61,51 @@
                BlueprintIdentifier = "FC99CFED28C5F166000D527B"
                BuildableName = "feed-app-iOSTests.xctest"
                BlueprintName = "feed-app-iOSTests"
-               ReferencedContainer = "container:feed-app.xcodeproj">
+               ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FCCFCFA028A8324B0095D3E7"
+               BuildableName = "feed-appEndToEndTests.xctest"
+               BlueprintName = "feed-appEndToEndTests"
+               ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FCA7283D28955B5C00560FBD"
+               BuildableName = "feed-appTests.xctest"
+               BlueprintName = "feed-appTests"
+               ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC42FAE328C47D0400B068C5"
+               BuildableName = "feed_appCacheIntegrationTests.xctest"
+               BlueprintName = "feed_appCacheIntegrationTests"
+               ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC4ABB1E292B4D9600464813"
+               BuildableName = "main-appTests.xctest"
+               BlueprintName = "main-appTests"
+               ReferencedContainer = "container:main-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -75,7 +133,7 @@
             BlueprintIdentifier = "FC99CFE628C5F165000D527B"
             BuildableName = "feed_app_iOS.framework"
             BlueprintName = "feed-app-iOS"
-            ReferencedContainer = "container:feed-app.xcodeproj">
+            ReferencedContainer = "container:../feed-app/feed-app.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
