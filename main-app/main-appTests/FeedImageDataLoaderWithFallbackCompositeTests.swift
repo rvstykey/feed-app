@@ -29,7 +29,6 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         XCTAssertTrue(fallbackLoader.loadedURLs.isEmpty, "Expected no loaded URLs in the fallback loader")
     }
     
-    
     func test_loadImageData_loadsFromFallbackOnPrimaryLoaderFailure() {
         let url = anyURL()
         let (sut, primaryLoader, fallbackLoader) = makeSUT()
@@ -126,19 +125,6 @@ class FeedImageDataLoaderWithFallbackCompositeTests: XCTestCase {
         action()
         
         wait(for: [exp], timeout: 1.0)
-    }
-    
-    func anyData() -> Data {
-        return Data("any data".utf8)
-    }
-    
-    
-    private func anyURL() -> URL {
-        return URL(string: "http://a-url.com")!
-    }
-    
-    private func anyNSError() -> NSError {
-        return NSError(domain: "any error", code: 0)
     }
     
     private class LoaderSpy: FeedImageDataLoader {
