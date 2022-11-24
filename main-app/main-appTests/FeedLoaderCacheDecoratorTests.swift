@@ -7,31 +7,7 @@
 
 import XCTest
 import feed_app
-
-protocol FeedCache {
-    typealias Result = Swift.Result<Void, Error>
-    
-    func save(_ feed: [FeedImage], completion: @escaping (Result) -> Void)
-}
-
-final class FeedLoaderCacheDecorator: FeedLoader {
-    private let decoratee: FeedLoader
-    private let cache: FeedCache
-    
-    init(decoratee: FeedLoader, cache: FeedCache) {
-        self.decoratee = decoratee
-        self.cache = cache
-    }
-    
-    func load(completion: @escaping (FeedLoader.Result) -> Void) {
-        decoratee.load { [weak self] result in
-            completion(result.map({ feed in
-                self?.cache.save(feed) { _ in}
-                return feed
-            }))
-        }
-    }
-}
+import main_app
 
 class FeedLoaderCacheDecoratorTests: XCTestCase, FeedLoaderTestCase {
     

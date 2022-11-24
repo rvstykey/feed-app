@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0C083A292F534900C943FA /* FeedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0839292F534900C943FA /* FeedCache.swift */; };
 		FC2CD3EE28C09D7400EACF17 /* FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CD3ED28C09D7400EACF17 /* FeedStoreSpecs.swift */; };
 		FC2CD3F028C09DE400EACF17 /* XCTestCase+FeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CD3EF28C09DE400EACF17 /* XCTestCase+FeedStoreSpecs.swift */; };
 		FC2CD3F328C09F8800EACF17 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2CD3F228C09F8800EACF17 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
@@ -156,6 +157,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FC0C0839292F534900C943FA /* FeedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCache.swift; sourceTree = "<group>"; };
 		FC2CD3ED28C09D7400EACF17 /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		FC2CD3EF28C09DE400EACF17 /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		FC2CD3F228C09F8800EACF17 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 				FCA7284E28955BA800560FBD /* FeedImage.swift */,
 				FC6476CD2920BCF600BF980B /* FeedImageDataLoader.swift */,
 				FCA7285028955C8100560FBD /* FeedLoader.swift */,
+				FC0C0839292F534900C943FA /* FeedCache.swift */,
 			);
 			path = "Feed Feature";
 			sourceTree = "<group>";
@@ -946,6 +949,7 @@
 				FC4ABACD2927723200464813 /* FeedLoadingViewModel.swift in Sources */,
 				FC4ABAD42927764900464813 /* FeedImagePresenter.swift in Sources */,
 				FC4ABAE629296A9600464813 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				FC0C083A292F534900C943FA /* FeedCache.swift in Sources */,
 				FC42FADF28C3EA9900B068C5 /* ManagedFeedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
