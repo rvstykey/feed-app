@@ -13,6 +13,8 @@
 		FC0C0824292DFF9F00C943FA /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0823292DFF9F00C943FA /* FeedImageDataLoaderWithFallbackComposite.swift */; };
 		FC0C0826292DFFD700C943FA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0825292DFFD700C943FA /* XCTestCase+MemoryLeakTracking.swift */; };
 		FC0C0829292E00AD00C943FA /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0828292E00AD00C943FA /* SharedTestHelpers.swift */; };
+		FC0C0834292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0833292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift */; };
+		FC0C0836292F4BB900C943FA /* FeedLoaderStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0C0835292F4BB900C943FA /* FeedLoaderStub.swift */; };
 		FC4ABB0D292B4D9200464813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABB0C292B4D9200464813 /* AppDelegate.swift */; };
 		FC4ABB0F292B4D9200464813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABB0E292B4D9200464813 /* SceneDelegate.swift */; };
 		FC4ABB11292B4D9200464813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABB10292B4D9200464813 /* ViewController.swift */; };
@@ -57,6 +59,8 @@
 		FC0C0823292DFF9F00C943FA /* FeedImageDataLoaderWithFallbackComposite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataLoaderWithFallbackComposite.swift; sourceTree = "<group>"; };
 		FC0C0825292DFFD700C943FA /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
 		FC0C0828292E00AD00C943FA /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		FC0C0833292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderCacheDecoratorTests.swift; sourceTree = "<group>"; };
+		FC0C0835292F4BB900C943FA /* FeedLoaderStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoaderStub.swift; sourceTree = "<group>"; };
 		FC4ABB09292B4D9200464813 /* main-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "main-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4ABB0C292B4D9200464813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4ABB0E292B4D9200464813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			children = (
 				FC0C0825292DFFD700C943FA /* XCTestCase+MemoryLeakTracking.swift */,
 				FC0C0828292E00AD00C943FA /* SharedTestHelpers.swift */,
+				FC0C0835292F4BB900C943FA /* FeedLoaderStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				FC0C0827292DFFEC00C943FA /* Helpers */,
 				FC0C081D292DE71F00C943FA /* FeedLoaderWithFallbackCompositeTests.swift */,
 				FC0C0821292DFE0900C943FA /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
+				FC0C0833292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift */,
 			);
 			path = "main-appTests";
 			sourceTree = "<group>";
@@ -269,8 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC0C0829292E00AD00C943FA /* SharedTestHelpers.swift in Sources */,
+				FC0C0834292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				FC0C0822292DFE0900C943FA /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				FC0C081E292DE71F00C943FA /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
+				FC0C0836292F4BB900C943FA /* FeedLoaderStub.swift in Sources */,
 				FC0C0826292DFFD700C943FA /* XCTestCase+MemoryLeakTracking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
