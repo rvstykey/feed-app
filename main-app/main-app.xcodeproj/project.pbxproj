@@ -146,9 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				FC0C0827292DFFEC00C943FA /* Helpers */,
+				FC0C0833292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift */,
 				FC0C081D292DE71F00C943FA /* FeedLoaderWithFallbackCompositeTests.swift */,
 				FC0C0821292DFE0900C943FA /* FeedImageDataLoaderWithFallbackCompositeTests.swift */,
-				FC0C0833292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift */,
 			);
 			path = "main-appTests";
 			sourceTree = "<group>";
