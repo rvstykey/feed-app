@@ -32,6 +32,7 @@
 		FC4ABB3F292B4EB900464813 /* feed_app.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC4ABB3D292B4EB900464813 /* feed_app.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC4ABB42292B4EC600464813 /* feed_app_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4ABB41292B4EC600464813 /* feed_app_iOS.framework */; };
 		FC4ABB43292B4EC600464813 /* feed_app_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC4ABB41292B4EC600464813 /* feed_app_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FC5DC39D2933EA3600E2DAAA /* DebuggingSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5DC39C2933EA3600E2DAAA /* DebuggingSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		FC4ABB1F292B4D9600464813 /* main-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "main-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4ABB3D292B4EB900464813 /* feed_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = feed_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4ABB41292B4EC600464813 /* feed_app_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = feed_app_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC5DC39C2933EA3600E2DAAA /* DebuggingSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4ABB0C292B4D9200464813 /* AppDelegate.swift */,
+				FC5DC39C2933EA3600E2DAAA /* DebuggingSceneDelegate.swift */,
 				FC4ABB0E292B4D9200464813 /* SceneDelegate.swift */,
 				FC4ABB10292B4D9200464813 /* ViewController.swift */,
 				FC4ABB12292B4D9200464813 /* Main.storyboard */,
@@ -349,6 +352,7 @@
 				FC4ABB0D292B4D9200464813 /* AppDelegate.swift in Sources */,
 				FC0C0820292DF3D400C943FA /* FeedLoaderWithFallbackComposite.swift in Sources */,
 				FC0C083C292F53E700C943FA /* FeedLoaderCacheDecorator.swift in Sources */,
+				FC5DC39D2933EA3600E2DAAA /* DebuggingSceneDelegate.swift in Sources */,
 				FC4ABB0F292B4D9200464813 /* SceneDelegate.swift in Sources */,
 				FC0C0824292DFF9F00C943FA /* FeedImageDataLoaderWithFallbackComposite.swift in Sources */,
 				FC0C084D292F5D3C00C943FA /* FeedImageDataLoaderCacheDecorator.swift in Sources */,
