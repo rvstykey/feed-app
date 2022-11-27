@@ -39,6 +39,8 @@
 		FC29C8742933F900006F2C8A /* FeedViewControllerTests+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C8662933F900006F2C8A /* FeedViewControllerTests+Localization.swift */; };
 		FC29C8762933F920006F2C8A /* FeedUIIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C8752933F920006F2C8A /* FeedUIIntegrationTests.swift */; };
 		FC29C8782933FAFE006F2C8A /* FeedAcceptanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C8772933FAFE006F2C8A /* FeedAcceptanceTests.swift */; };
+		FC29C87A29340603006F2C8A /* HTTPClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C87929340603006F2C8A /* HTTPClientStub.swift */; };
+		FC29C87C2934062B006F2C8A /* InMemoryFeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC29C87B2934062B006F2C8A /* InMemoryFeedStore.swift */; };
 		FC4ABB0D292B4D9200464813 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABB0C292B4D9200464813 /* AppDelegate.swift */; };
 		FC4ABB0F292B4D9200464813 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABB0E292B4D9200464813 /* SceneDelegate.swift */; };
 		FC4ABB11292B4D9200464813 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABB10292B4D9200464813 /* ViewController.swift */; };
@@ -109,6 +111,8 @@
 		FC29C86B2933F900006F2C8A /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		FC29C8752933F920006F2C8A /* FeedUIIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedUIIntegrationTests.swift; sourceTree = "<group>"; };
 		FC29C8772933FAFE006F2C8A /* FeedAcceptanceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAcceptanceTests.swift; sourceTree = "<group>"; };
+		FC29C87929340603006F2C8A /* HTTPClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientStub.swift; sourceTree = "<group>"; };
+		FC29C87B2934062B006F2C8A /* InMemoryFeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryFeedStore.swift; sourceTree = "<group>"; };
 		FC4ABB09292B4D9200464813 /* main-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "main-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4ABB0C292B4D9200464813 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4ABB0E292B4D9200464813 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				FC0C0848292F5C3B00C943FA /* XCTestCase+FeedImageDataLoader.swift */,
 				FC0C0837292F4E9F00C943FA /* XCTestCase+FeedLoader.swift */,
 				FC0C0825292DFFD700C943FA /* XCTestCase+MemoryLeakTracking.swift */,
+				FC29C87929340603006F2C8A /* HTTPClientStub.swift */,
+				FC29C87B2934062B006F2C8A /* InMemoryFeedStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -365,10 +371,12 @@
 				FC29C86C2933F900006F2C8A /* UIControl+TestHelpers.swift in Sources */,
 				FC0C0849292F5C3B00C943FA /* XCTestCase+FeedImageDataLoader.swift in Sources */,
 				FC29C86F2933F900006F2C8A /* FeedViewControllerTests+Assertions.swift in Sources */,
+				FC29C87C2934062B006F2C8A /* InMemoryFeedStore.swift in Sources */,
 				FC29C8562933F5DC006F2C8A /* SceneDelegateTests.swift in Sources */,
 				FC0C0834292F465F00C943FA /* FeedLoaderCacheDecoratorTests.swift in Sources */,
 				FC0C0847292F5B9B00C943FA /* FeedImageDataLoaderSpy.swift in Sources */,
 				FC29C86D2933F900006F2C8A /* UIRefreshControl+TestHelpers.swift in Sources */,
+				FC29C87A29340603006F2C8A /* HTTPClientStub.swift in Sources */,
 				FC0C0822292DFE0900C943FA /* FeedImageDataLoaderWithFallbackCompositeTests.swift in Sources */,
 				FC0C081E292DE71F00C943FA /* FeedLoaderWithFallbackCompositeTests.swift in Sources */,
 				FC0C0836292F4BB900C943FA /* FeedLoaderStub.swift in Sources */,
