@@ -90,6 +90,28 @@
                ReferencedContainer = "container:feed-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC4ABB1E292B4D9600464813"
+               BuildableName = "main-appTests.xctest"
+               BlueprintName = "main-appTests"
+               ReferencedContainer = "container:../main-app/main-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC0C089C29336B9E00C943FA"
+               BuildableName = "main-appUIAcceptanceTests.xctest"
+               BlueprintName = "main-appUIAcceptanceTests"
+               ReferencedContainer = "container:../main-app/main-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
