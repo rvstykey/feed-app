@@ -7,6 +7,7 @@
 
 import UIKit
 import XCTest
+import main_app
 import feed_app
 import feed_app_iOS
 

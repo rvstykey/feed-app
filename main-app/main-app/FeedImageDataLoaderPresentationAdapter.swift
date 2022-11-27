@@ -7,6 +7,7 @@
 
 import Foundation
 import feed_app
+import feed_app_iOS
 
 final class FeedImageDataLoaderPresentationAdapter<View: FeedImageView, Image>: FeedImageCellControllerDelegate where View.Image == Image {
     private let model: FeedImage
