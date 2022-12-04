@@ -10,40 +10,6 @@ import feed_app
 
 class LoadFeedFromRemoteUseCaseTests: XCTestCase {
     
-    func test_init_doesNotRequestDataFromURL() {
-        let (_, client) = makeSUT()
-        
-        XCTAssertTrue(client.requestedURLs.isEmpty)
-    }
-    
-    func test_load_requestsDataFromURL() {
-        let url = URL(string: "http://a-given-url.com")!
-        let (sut, client) = makeSUT(url: url)
-        
-        sut.load() { _ in }
-        
-        XCTAssertEqual(client.requestedURLs, [url])
-    }
-    
-    func test_load_requestsDataFromURLTwice() {
-        let url = URL(string: "http://a-given-url.com")!
-        let (sut, client) = makeSUT(url: url)
-        
-        sut.load() { _ in }
-        sut.load() { _ in }
-        
-        XCTAssertEqual(client.requestedURLs, [url, url])
-    }
-    
-    func test_load_deliversErrorOnClientError() {
-        let (sut, client) = makeSUT()
-        
-        expect(sut, toCompleteWith: failure(.connectivity)) {
-            let clientError = NSError(domain: "Test", code: 0)
-            client.complete(with: clientError)
-        }
-    }
-    
     func test_load_deliversErrorOnNon200HttpResponse() {
         let (sut, client) = makeSUT()
         
@@ -93,19 +59,6 @@ class LoadFeedFromRemoteUseCaseTests: XCTestCase {
             let jsonData = makeItemsJSON([item1.json, item2.json ])
             client.complete(withStatusCode: 200, data: jsonData)
         }
-    }
-    
-    func test_load_doesNotDeliverResultAfterSUTDeallocated() {
-        let client = HTTPClientSpy()
-        var sut: RemoteFeedLoader? = RemoteFeedLoader(url: URL(string: "http://a-url.com")!, client: client)
-        
-        var capturedResults: [RemoteFeedLoader.Result] = []
-        sut?.load() { capturedResults.append($0) }
-        
-        sut = nil
-        client.complete(withStatusCode: 200, data: Data())
-        
-        XCTAssert(capturedResults.isEmpty)
     }
     
     // MARK: - Helpers

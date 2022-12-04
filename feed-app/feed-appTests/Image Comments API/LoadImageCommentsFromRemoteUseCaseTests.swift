@@ -12,40 +12,6 @@ import feed_app
 
 class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
     
-    func test_init_doesNotRequestDataFromURL() {
-        let (_, client) = makeSUT()
-        
-        XCTAssertTrue(client.requestedURLs.isEmpty)
-    }
-    
-    func test_load_requestsDataFromURL() {
-        let url = URL(string: "http://a-given-url.com")!
-        let (sut, client) = makeSUT(url: url)
-        
-        sut.load() { _ in }
-        
-        XCTAssertEqual(client.requestedURLs, [url])
-    }
-    
-    func test_load_requestsDataFromURLTwice() {
-        let url = URL(string: "http://a-given-url.com")!
-        let (sut, client) = makeSUT(url: url)
-        
-        sut.load() { _ in }
-        sut.load() { _ in }
-        
-        XCTAssertEqual(client.requestedURLs, [url, url])
-    }
-    
-    func test_load_deliversErrorOnClientError() {
-        let (sut, client) = makeSUT()
-        
-        expect(sut, toCompleteWith: failure(.connectivity)) {
-            let clientError = NSError(domain: "Test", code: 0)
-            client.complete(with: clientError)
-        }
-    }
-    
     func test_load_deliversErrorOnNon2xxHttpResponse() {
         let (sut, client) = makeSUT()
         
@@ -106,19 +72,6 @@ class LoadImageCommentsFromRemoteUseCaseTests: XCTestCase {
                 client.complete(withStatusCode: code, data: jsonData, at: index)
             }
         }
-    }
-    
-    func test_load_doesNotDeliverResultAfterSUTDeallocated() {
-        let client = HTTPClientSpy()
-        var sut: RemoteImageCommentsLoader? = RemoteImageCommentsLoader(url: URL(string: "http://a-url.com")!, client: client)
-        
-        var capturedResults: [RemoteImageCommentsLoader.Result] = []
-        sut?.load() { capturedResults.append($0) }
-        
-        sut = nil
-        client.complete(withStatusCode: 200, data: Data())
-        
-        XCTAssert(capturedResults.isEmpty)
     }
     
     // MARK: - Helpers
