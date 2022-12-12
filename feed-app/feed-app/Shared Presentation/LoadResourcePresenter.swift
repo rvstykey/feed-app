@@ -21,7 +21,7 @@ public final class LoadResourcePresenter<Resource, View: ResourceView> {
     private let errorView: FeedErrorView
     private let mapper: Mapper
     
-    private static var loadError: String {
+    public static var loadError: String {
         NSLocalizedString("GENERIC_CONNECTION_ERROR",
                           tableName: "Shared",
                           bundle: Bundle(for: Self.self),
