@@ -67,6 +67,8 @@
 		FC73B2392949C4D20034EF34 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73B2382949C4D20034EF34 /* ResourceLoadingView.swift */; };
 		FC73B23B2949C59A0034EF34 /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73B23A2949C59A0034EF34 /* ResourceErrorView.swift */; };
 		FC73B23E2949FD470034EF34 /* ImageCommentsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73B23D2949FD470034EF34 /* ImageCommentsPresenterTests.swift */; };
+		FC73B241294A009A0034EF34 /* ImageCommentsPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC73B240294A009A0034EF34 /* ImageCommentsPresentation.swift */; };
+		FC73B243294A01070034EF34 /* ImageComments.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC73B242294A01070034EF34 /* ImageComments.strings */; };
 		FC84E50828B12A5E002EB80C /* CacheFeedUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC84E50728B12A5E002EB80C /* CacheFeedUseCaseTests.swift */; };
 		FC93E4C5292501B3009B0645 /* Feed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC93E4C4292501B3009B0645 /* Feed.storyboard */; };
 		FC93E4C72925026B009B0645 /* Feed.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC93E4C62925026B009B0645 /* Feed.xcassets */; };
@@ -207,6 +209,8 @@
 		FC73B2382949C4D20034EF34 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
 		FC73B23A2949C59A0034EF34 /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
 		FC73B23D2949FD470034EF34 /* ImageCommentsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsPresenterTests.swift; sourceTree = "<group>"; };
+		FC73B240294A009A0034EF34 /* ImageCommentsPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsPresentation.swift; sourceTree = "<group>"; };
+		FC73B242294A01070034EF34 /* ImageComments.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ImageComments.strings; sourceTree = "<group>"; };
 		FC84E50728B12A5E002EB80C /* CacheFeedUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedUseCaseTests.swift; sourceTree = "<group>"; };
 		FC93E4C4292501B3009B0645 /* Feed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Feed.storyboard; sourceTree = "<group>"; };
 		FC93E4C62925026B009B0645 /* Feed.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Feed.xcassets; sourceTree = "<group>"; };
@@ -504,6 +508,15 @@
 			path = "Image Comments Presentation";
 			sourceTree = "<group>";
 		};
+		FC73B23F294A006F0034EF34 /* Image Comments Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FC73B240294A009A0034EF34 /* ImageCommentsPresentation.swift */,
+				FC73B242294A01070034EF34 /* ImageComments.strings */,
+			);
+			path = "Image Comments Presentation";
+			sourceTree = "<group>";
+		};
 		FC84E50628B12A40002EB80C /* Feed Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +585,7 @@
 				FCCFCEB12946029F001FBCF6 /* Shared Presentation */,
 				FC13C8B9293CB18300A33DC2 /* Image Comments Feature */,
 				FC13C8C1293CBB3E00A33DC2 /* Image Comments API */,
+				FC73B23F294A006F0034EF34 /* Image Comments Presentation */,
 				FC6534F828B8ECC600E23505 /* Feed Cache */,
 				FCA7285228955D7F00560FBD /* Feed Feature */,
 				FCA7285528962FA300560FBD /* Feed API */,
@@ -899,6 +913,7 @@
 			files = (
 				FC4ABAC9292771D200464813 /* Feed.strings in Resources */,
 				FCCFCEB829470128001FBCF6 /* Shared.strings in Resources */,
+				FC73B243294A01070034EF34 /* ImageComments.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -977,6 +992,7 @@
 				FC13C8B8293CAC6300A33DC2 /* ImageCommentsMapper.swift in Sources */,
 				FCCFCEB3294602B1001FBCF6 /* LoadResourcePresenter.swift in Sources */,
 				FCCFCF9028A25C7B0095D3E7 /* HTTPClient.swift in Sources */,
+				FC73B241294A009A0034EF34 /* ImageCommentsPresentation.swift in Sources */,
 				FCA7284F28955BA800560FBD /* FeedImage.swift in Sources */,
 				FC0C084B292F5CEB00C943FA /* FeedImageDataCache.swift in Sources */,
 				FC4ABAC82927717400464813 /* FeedPresenter.swift in Sources */,
