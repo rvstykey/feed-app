@@ -1,5 +1,5 @@
 //
-//  FeedViewController+TestHelpers.swift
+//  ListViewController+TestHelpers.swift
 //  feed-app-iOSTests
 //
 //  Created by Rostislav Zapolsky on 16.11.22.
@@ -8,7 +8,7 @@
 import UIKit
 import feed_app_iOS
 
-extension FeedViewController {
+extension ListViewController {
     func simulateUserInitiatedFeedReload() {
         refreshControl?.simulatePullToRefresh()
     }

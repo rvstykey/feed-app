@@ -1,5 +1,5 @@
 //
-//  FeedViewController.swift
+//  ListViewController.swift
 //  feed-app-iOS
 //
 //  Created by Rostislav Zapolsky on 07.09.22.
@@ -18,7 +18,7 @@ public protocol CellController {
     func cancelLoad()
 }
 
-public final class FeedViewController: UITableViewController {
+public final class ListViewController: UITableViewController {
     
     @IBOutlet private(set) public var errorView: ErrorView?
     
@@ -60,7 +60,7 @@ public final class FeedViewController: UITableViewController {
     }
 }
 
-extension FeedViewController: UITableViewDataSourcePrefetching {
+extension ListViewController: UITableViewDataSourcePrefetching {
     public func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach { indexPath in
             cellController(forRowAt: indexPath).preload()
@@ -72,20 +72,20 @@ extension FeedViewController: UITableViewDataSourcePrefetching {
     }
 }
 
-extension FeedViewController: ResourceLoadingView {
+extension ListViewController: ResourceLoadingView {
     public func display(_ viewModel: ResourceLoadingViewModel) {
         refreshControl?.update(isRefreshing: viewModel.isLoading)
     }
     
 }
 
-extension FeedViewController: ResourceErrorView {
+extension ListViewController: ResourceErrorView {
     public func display(_ viewModel: ResourceErrorViewModel) {
         errorView?.message = viewModel.message
     }
 }
 
-private extension FeedViewController {
+private extension ListViewController {
     @IBAction func refresh() {
         delegate?.didRequestFeedRefresh()
     }
