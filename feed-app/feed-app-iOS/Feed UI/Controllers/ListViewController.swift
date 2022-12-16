@@ -8,10 +8,6 @@
 import UIKit
 import feed_app
 
-public protocol FeedViewControllerDelegate {
-    func didRequestFeedRefresh()
-}
-
 public protocol CellController {
     func view(in: UITableView) -> UITableViewCell
     func preload()
@@ -28,7 +24,7 @@ public final class ListViewController: UITableViewController {
         didSet { tableView.reloadData() }
     }
     
-    public var delegate: FeedViewControllerDelegate?
+    public var onRefresh: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +83,7 @@ extension ListViewController: ResourceErrorView {
 
 private extension ListViewController {
     @IBAction func refresh() {
-        delegate?.didRequestFeedRefresh()
+        onRefresh?()
     }
     
     func cellController(forRowAt indexPath: IndexPath) -> CellController {
