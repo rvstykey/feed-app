@@ -420,10 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				FC93E4D02925190E009B0645 /* UIImageView+Animations.swift */,
-				FC93E4CE292518C8009B0645 /* UITableView+Dequeueing.swift */,
 				FC6476AC2918FD1200BF980B /* UIView+Shimmering.swift */,
-				FC4ABAC12927608700464813 /* UIRefreshControl+Helpers.swift */,
-				FCB4AE942939EF7E00C53094 /* UITableView+HeaderSizing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -478,7 +475,6 @@
 		FC6476D02920BD2300BF980B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCC306B128C8839F009FEAE0 /* ListViewController.swift */,
 				FC6476D4292231B500BF980B /* FeedImageCellController.swift */,
 			);
 			path = Controllers;
@@ -491,7 +487,6 @@
 				FCD41DE628CDFCF1003A3BAE /* FeedImageCell.swift */,
 				FC93E4C4292501B3009B0645 /* Feed.storyboard */,
 				FC93E4C62925026B009B0645 /* Feed.xcassets */,
-				FC4ABABE2927604B00464813 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -578,9 +573,46 @@
 			path = snapshots;
 			sourceTree = "<group>";
 		};
+		FC8C1506294C750C00B27540 /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C1507294C751600B27540 /* Controllers */,
+				FC8C1508294C752800B27540 /* Views */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		FC8C1507294C751600B27540 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCC306B128C8839F009FEAE0 /* ListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FC8C1508294C752800B27540 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC8C1509294C754200B27540 /* Helpers */,
+				FC4ABABE2927604B00464813 /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC8C1509294C754200B27540 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FC93E4CE292518C8009B0645 /* UITableView+Dequeueing.swift */,
+				FC4ABAC12927608700464813 /* UIRefreshControl+Helpers.swift */,
+				FCB4AE942939EF7E00C53094 /* UITableView+HeaderSizing.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		FC99CFE828C5F165000D527B /* feed-app-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FC8C1506294C750C00B27540 /* Shared UI */,
 				FC6476CF2920BD1300BF980B /* Feed UI */,
 			);
 			path = "feed-app-iOS";
