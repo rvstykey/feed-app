@@ -60,11 +60,6 @@ public final class ListViewController: UITableViewController {
             dataSource.apply(snapshot)
         }
     }
-    
-    public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let dl = cellController(at: indexPath)?.delegate
-        dl?.tableView?(tableView, willDisplay: cell, forRowAt: indexPath)
-    }
 }
 
 extension ListViewController: UITableViewDataSourcePrefetching {
