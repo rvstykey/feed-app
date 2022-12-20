@@ -16,7 +16,7 @@ final class CommentsUIIntegrationTests: XCTestCase {
     
     func test_commentsView_hasTitle() {
         let (sut, _) = makeSUT()
-
+        
         sut.loadViewIfNeeded()
         
         XCTAssertEqual(sut.title, commentsTitle)
@@ -51,7 +51,7 @@ final class CommentsUIIntegrationTests: XCTestCase {
         loader.completeCommentsLoadingWithError(at: 1)
         XCTAssertFalse(sut.isShowingLoadingIndicator, "Expected no loading indicator once user initiated loading completes with error")
     }
-
+    
     func test_loadCommentsCompletion_rendersSuccessfullyLoadedComments() {
         let comment0 = makeComment(message: "a message", username: "a username")
         let comment1 = makeComment(message: "another message", username: "another username")
@@ -59,10 +59,10 @@ final class CommentsUIIntegrationTests: XCTestCase {
         
         sut.loadViewIfNeeded()
         assertThat(sut, isRendering: [ImageComment]())
-
+        
         loader.completeCommentsLoading(with: [comment0], at: 0)
         assertThat(sut, isRendering: [comment0])
-
+        
         sut.simulateUserInitiatedReload()
         loader.completeCommentsLoading(with: [comment0, comment1], at: 1)
         assertThat(sut, isRendering: [comment0, comment1])
@@ -130,6 +130,29 @@ final class CommentsUIIntegrationTests: XCTestCase {
         
         sut.simulateErrorViewTap()
         XCTAssertEqual(sut.errorMessage, nil)
+    }
+    
+    func test_deinit_cancelsRunningrequests() {
+        var cancelCallCount = 0
+        
+        var sut: ListViewController?
+        
+        autoreleasepool {
+            sut = CommentsUIComposer.commentsComposedWith(commentsLoader: {
+                PassthroughSubject<[ImageComment], Error>()
+                    .handleEvents(receiveCancel: {
+                        cancelCallCount += 1
+                    }).eraseToAnyPublisher()
+            })
+            
+            sut?.loadViewIfNeeded()
+        }
+        
+        XCTAssertEqual(cancelCallCount, 0)
+        
+        sut = nil
+        
+        XCTAssertEqual(cancelCallCount, 1)
     }
     
     // MARK: - Helpers
