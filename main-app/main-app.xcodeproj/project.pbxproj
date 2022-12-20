@@ -178,13 +178,13 @@
 				FC13C8B1293B956200A33DC2 /* CombineHelpers.swift */,
 				FC4ABB10292B4D9200464813 /* ViewController.swift */,
 				FC29C8572933F8CB006F2C8A /* FeedUIComposer.swift */,
+				FC2DB5A629518BF4004CF22E /* CommentsUIComposer.swift */,
 				FC29C8582933F8CB006F2C8A /* WeakRefVirtualProxy.swift */,
 				FC29C85C2933F8CB006F2C8A /* LoadResourcePresentationAdapter.swift */,
 				FC29C8592933F8CB006F2C8A /* FeedViewAdapter.swift */,
 				FC4ABB15292B4D9500464813 /* Assets.xcassets */,
 				FC4ABB17292B4D9500464813 /* LaunchScreen.storyboard */,
 				FC4ABB1A292B4D9500464813 /* Info.plist */,
-				FC2DB5A629518BF4004CF22E /* CommentsUIComposer.swift */,
 			);
 			path = "main-app";
 			sourceTree = "<group>";
