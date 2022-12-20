@@ -11,7 +11,7 @@ import main_app
 import feed_app
 import feed_app_iOS
 
-class FeedUIIntegrationTests: XCTestCase {
+final class FeedUIIntegrationTests: XCTestCase {
     
     func test_feedView_hasTitle() {
         let (sut, _) = makeSUT()
