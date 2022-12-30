@@ -49,12 +49,13 @@ extension LoadMoreCellController: UITableViewDataSource, UITableViewDelegate {
     
     private func reloadIfNeeded() {
         guard !cell.isLoading else { return }
+        
         callback()
     }
 }
 
 extension LoadMoreCellController: ResourceLoadingView, ResourceErrorView {
-    public func display(_ viewModel: feed_app.ResourceErrorViewModel) {
+    public func display(_ viewModel: ResourceErrorViewModel) {
         cell.message = viewModel.message
     }
     
