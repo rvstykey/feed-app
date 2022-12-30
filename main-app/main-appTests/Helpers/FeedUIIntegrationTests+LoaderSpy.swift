@@ -50,10 +50,10 @@ extension FeedUIIntegrationTests {
             loadMoreRequests[index].send(Paginated(
                 items: feed,
                 loadMorePublisher: lastPage ? nil : { [weak self] in
-                let publisher = PassthroughSubject<Paginated<FeedImage>, Error>()
-                self?.loadMoreRequests.append(publisher)
-                return publisher.eraseToAnyPublisher()
-            }))
+                    let publisher = PassthroughSubject<Paginated<FeedImage>, Error>()
+                    self?.loadMoreRequests.append(publisher)
+                    return publisher.eraseToAnyPublisher()
+                }))
         }
         
         func completeLoadMoreWithError(at index: Int = 0) {
