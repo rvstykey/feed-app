@@ -41,6 +41,7 @@
 		FC4ABB42292B4EC600464813 /* feed_app_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC4ABB41292B4EC600464813 /* feed_app_iOS.framework */; };
 		FC4ABB43292B4EC600464813 /* feed_app_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC4ABB41292B4EC600464813 /* feed_app_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FCB4AE9B2939FA1C00C53094 /* UIView+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB4AE9A2939FA1C00C53094 /* UIView+TestHelpers.swift */; };
+		FCB8202329603FED00805EE8 /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB8202229603FED00805EE8 /* NullStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		FC4ABB3D292B4EB900464813 /* feed_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = feed_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4ABB41292B4EC600464813 /* feed_app_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = feed_app_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCB4AE9A2939FA1C00C53094 /* UIView+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TestHelpers.swift"; sourceTree = "<group>"; };
+		FCB8202229603FED00805EE8 /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				FC4ABB0C292B4D9200464813 /* AppDelegate.swift */,
 				FC4ABB0E292B4D9200464813 /* SceneDelegate.swift */,
+				FCB8202229603FED00805EE8 /* NullStore.swift */,
 				FC13C8B1293B956200A33DC2 /* CombineHelpers.swift */,
 				FC4ABB10292B4D9200464813 /* ViewController.swift */,
 				FC29C8572933F8CB006F2C8A /* FeedUIComposer.swift */,
@@ -311,6 +314,7 @@
 			files = (
 				FC29C8622933F8CB006F2C8A /* FeedViewAdapter.swift in Sources */,
 				FC13C8B2293B956200A33DC2 /* CombineHelpers.swift in Sources */,
+				FCB8202329603FED00805EE8 /* NullStore.swift in Sources */,
 				FC29C8602933F8CB006F2C8A /* FeedUIComposer.swift in Sources */,
 				FC4ABB11292B4D9200464813 /* ViewController.swift in Sources */,
 				FC2DB5A729518BF4004CF22E /* CommentsUIComposer.swift in Sources */,
