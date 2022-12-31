@@ -46,7 +46,7 @@
 		FC4ABAE629296A9600464813 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAE529296A9600464813 /* HTTPURLResponse+StatusCode.swift */; };
 		FC4ABAED29296BC600464813 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAEC29296BC600464813 /* URLProtocolStub.swift */; };
 		FC4ABAF1292B3F5100464813 /* FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAF0292B3F5100464813 /* FeedImageDataStore.swift */; };
-		FC4ABAF3292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAF2292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataLoader.swift */; };
+		FC4ABAF3292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAF2292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataStore.swift */; };
 		FC4ABAF5292B3FA800464813 /* CoreDataFeedStore+FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAF4292B3FA800464813 /* CoreDataFeedStore+FeedStore.swift */; };
 		FC4ABAF7292B40DC00464813 /* LocalFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAF6292B40DC00464813 /* LocalFeedImageDataLoader.swift */; };
 		FC4ABAF9292B427A00464813 /* CacheFeedImageDataUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4ABAF8292B427A00464813 /* CacheFeedImageDataUseCaseTests.swift */; };
@@ -221,7 +221,7 @@
 		FC4ABAE529296A9600464813 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		FC4ABAEC29296BC600464813 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 		FC4ABAF0292B3F5100464813 /* FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataStore.swift; sourceTree = "<group>"; };
-		FC4ABAF2292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataLoader.swift"; sourceTree = "<group>"; };
+		FC4ABAF2292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedImageDataStore.swift"; sourceTree = "<group>"; };
 		FC4ABAF4292B3FA800464813 /* CoreDataFeedStore+FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataFeedStore+FeedStore.swift"; sourceTree = "<group>"; };
 		FC4ABAF6292B40DC00464813 /* LocalFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		FC4ABAF8292B427A00464813 /* CacheFeedImageDataUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheFeedImageDataUseCaseTests.swift; sourceTree = "<group>"; };
@@ -455,7 +455,7 @@
 				FC42FAD428C35A0500B068C5 /* FeedStore.xcdatamodeld */,
 				FC42FADC28C3EA7C00B068C5 /* ManagedCache.swift */,
 				FC42FADE28C3EA9900B068C5 /* ManagedFeedImage.swift */,
-				FC4ABAF2292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataLoader.swift */,
+				FC4ABAF2292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataStore.swift */,
 				FC4ABAF4292B3FA800464813 /* CoreDataFeedStore+FeedStore.swift */,
 			);
 			path = CoreData;
@@ -1214,7 +1214,7 @@
 			files = (
 				FC42FADB28C3E91C00B068C5 /* CoreDataHelpers.swift in Sources */,
 				FCCFCF9228A25CB70095D3E7 /* FeedItemsMapper.swift in Sources */,
-				FC4ABAF3292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataLoader.swift in Sources */,
+				FC4ABAF3292B3F7B00464813 /* CoreDataFeedStore+FeedImageDataStore.swift in Sources */,
 				FC13C8C8293D312300A33DC2 /* FeedImageDataMapper.swift in Sources */,
 				FC73B23B2949C59A0034EF34 /* ResourceErrorView.swift in Sources */,
 				FC4ABAD6292776A800464813 /* FeedImageViewModel.swift in Sources */,
