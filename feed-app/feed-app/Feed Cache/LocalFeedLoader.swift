@@ -18,13 +18,9 @@ public class LocalFeedLoader {
 }
 
 extension LocalFeedLoader: FeedCache {
-    public typealias SaveResult = Result<Void, Error>
-    
-    public func save(_ feed: [FeedImage], completion: @escaping (SaveResult) -> Void) {
-        completion(SaveResult {
-             try store.deleteCachedFeed()
-             try store.insert(feed.toLocal(), timestamp: currentDate())
-         })
+    public func save(_ feed: [FeedImage]) throws {
+        try store.deleteCachedFeed()
+        try store.insert(feed.toLocal(), timestamp: currentDate())
     }
 }
 
